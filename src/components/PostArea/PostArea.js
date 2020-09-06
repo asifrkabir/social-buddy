@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
-import Typography from '@material-ui/core/Typography';
+import React, { useContext } from 'react';
 import Post from '../Post/Post';
 import { CategoryContext } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({

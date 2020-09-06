@@ -3,12 +3,12 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import Button from '@material-ui/core/Button';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
+import NoMatch from './components/NoMatch/NoMatch';
+import PostDetail from './components/PostDetail/PostDetail';
 
 export const CategoryContext = createContext();
 
@@ -32,14 +32,14 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/friend/:friendId">
-            {/* <FriendDetail /> */}
+          <Route path="/posts/:postId">
+            <PostDetail />
           </Route>
           <Route exact path="/">
             <Home />
           </Route>
           <Route path="*">
-            {/* <NoMatch /> */}
+            <NoMatch />
           </Route>
         </Switch>
       </Router>
